@@ -1,4 +1,3 @@
-
 package ru.netology.Radio.Control;
 
 import org.junit.jupiter.api.Assertions;
@@ -17,7 +16,7 @@ public class RadioChannelsTest {
     }
     @Test
     public void channelNumberLowerBound() {               //установить текущий номер радиостанции нижняя граница
-        RadioChannels channel = new RadioChannels();              //новый объект Radio
+        RadioChannels channel = new RadioChannels ();              //новый объект Radio
         channel.setTheRadioStationNumber(0);  //допустимые номера радиостанций от 0 до 9
 
         int expected = 0;                       //ожидаемый номер радиостанции
@@ -27,7 +26,7 @@ public class RadioChannelsTest {
     }
     @Test
     public void channelNumberUpperBound() {               //установить текущий номер радиостанции верхняя граница
-        RadioChannels channel = new RadioChannels();              //новый объект Radio
+        RadioChannels  channel = new RadioChannels ();              //новый объект Radio
         channel.setTheRadioStationNumber(9);  //допустимые номера радиостанций от 0 до 9
 
         int expected = 9;                       //ожидаемый номер радиостанции
@@ -38,7 +37,7 @@ public class RadioChannelsTest {
 
     @Test
     public void shouldNotSetStationNumberAboveMax() {//установить текущий номер радиостанции выше максимального
-        RadioChannels channel = new RadioChannels();
+        RadioChannels  channel = new RadioChannels ();
         channel.setTheRadioStationNumber(10);         //недопустимые номера: кроме от 0 до 9
 
         int expected = 0;
@@ -48,7 +47,7 @@ public class RadioChannelsTest {
 
     @Test
     public void shouldNotSetStationNumberAboveMin() {//установить текущий номер радиостанции ниже минимального
-        RadioChannels channel = new RadioChannels();
+        RadioChannels  channel = new RadioChannels ();
         channel.setTheRadioStationNumber(-1);         //недопустимые номера: кроме от 0 до 9
 
         int expected = 0;
@@ -58,7 +57,7 @@ public class RadioChannelsTest {
 
     @Test
     public void nextChannel() {                      //установить текущий номер на следующий номер
-        RadioChannels channel = new RadioChannels();
+        RadioChannels  channel = new RadioChannels ();
         channel.setCurrentRadioStationNumber(6);
         channel.next1ChannelNumber();
 
@@ -68,7 +67,7 @@ public class RadioChannelsTest {
     }
     @Test
     public void nextChannelCarousel() {                      //установить текущий номер на следующий номер по карусели
-        RadioChannels channel = new RadioChannels();
+        RadioChannels  channel = new RadioChannels ();
         channel.setCurrentRadioStationNumber(9);              //установить текущий номер 9
         channel.next1ChannelNumber();
 
@@ -79,22 +78,21 @@ public class RadioChannelsTest {
 
     @Test
     public void prevChannel() {                      //установить текущий номер на предыдущий номер
-        RadioChannels channel = new RadioChannels();
+        RadioChannels  channel = new RadioChannels ();
         channel.setCurrentRadioStationNumber(7);
         channel.prev1ChannelNumber();
 
         int expected = 6;
         int actual = channel.getCurrentRadioStationNumber();
-        Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals(6, channel.getCurrentRadioStationNumber());
     }
     @Test
     public void prevChannelCarousel() {                      //установить текущий номер на предыдущий номер по карусели
-        RadioChannels channel = new RadioChannels();
+        RadioChannels  channel = new RadioChannels ();
         channel.setCurrentRadioStationNumber(0);      //установить текущий номер 0
         channel.prev1ChannelNumber();
 
-        int expected = 9;
-        int actual = channel.getCurrentRadioStationNumber();
-        Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals(9, channel.getCurrentRadioStationNumber());
     }
+
 }

@@ -37,3 +37,7 @@ build/
 ### Mac OS ###
 .DS_Store
 .idea
+src/main/java/ru/netology/Radio/Control/RadioChannels.java
+src/main/java/ru/netology/Radio/Control/SoundVolumeLevel.java
+src/test/java/ru/netology/Radio/Control/SoundVolumeLevelTest.java
+src/test/java/ru/netology/Radio/Control/RadioChannelsTest.java
