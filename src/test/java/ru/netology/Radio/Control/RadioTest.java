@@ -97,7 +97,7 @@ public class RadioTest {
     }
     @Test
     public void shouldNotOfSetStationNumberAboveMin() {//установить текущий номер радиостанции ниже минимального
-        Radio channel = new Radio(4);
+        Radio channel = new Radio(-4);
         channel.setTheRadioStationNumber(-1);         //недопустимые номера: кроме от 0 до 9
 
         int expected = 0;
