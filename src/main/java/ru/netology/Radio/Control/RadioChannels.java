@@ -1,6 +1,6 @@
 package ru.netology.Radio.Control;
 
-public class RadioChannels {
+public class RadioChanels {
     private int currentRadioStationNumber; //текущий номер радиостанции
 
     public int getCurrentRadioStationNumber() { //отдать текущий номер радиостанции
