@@ -8,12 +8,8 @@ public class Radio {
     private int currentVolume; //текущий уровень громкости звука
 
     public Radio(int numberOfStations) {
-        if (numberOfStations < minStationNumber) {
-            return;
-        } else {
-            this.numberStations = numberOfStations;
-        }
-        this.maxStationNumber = numberOfStations - 1;
+       this.numberStations = numberOfStations;
+       this.maxStationNumber = this.numberStations - 1;
     }
     
     public Radio() {
